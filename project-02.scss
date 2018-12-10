@@ -1,0 +1,152 @@
+@import "variable";
+
+@mixin desktop {
+    @media (min-width: $desktop) {
+        @content;
+    }
+}
+
+$basecolor: #3996DB;
+.container{
+ display: flex;
+ flex-direction: row;
+}
+nav{
+   
+    flex: 1;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    padding-left: $padding;
+}
+nav a{
+    text-decoration: none;
+    text-align: center;
+    color:black;
+    display: block;
+    padding: 10px;
+}
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+}
+.logo img{
+    position: absolute;
+    margin-top: $logo-margin-top;
+    margin-left: $logo-margin-top;
+}
+.wrapper {
+   
+
+    @include desktop(){
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.wrapper > div{
+     display: flex;
+    flex-direction: column;
+    background:#ddd;
+    padding:1em;
+    margin-left: 2%;
+    margin-right: 2%;
+    
+}
+.wrapper > div:nth-child(odd){
+    background:#ddd;
+
+}
+
+.form-control {
+    width: 300px;
+}
+img {
+    width: $height;
+}
+
+
+a{
+    color: #000000;
+    text-transform: uppercase;
+}
+
+
+#Slider_area{
+     &:before{
+        background: rgba(0,0,0,0.5);
+        content: '';
+        height: $height;
+        width: $height;
+        left: 0;
+        top: 0;
+        position: absolute;
+    }
+.slider-text{
+    padding: 170px 0;
+
+
+h4{
+    color: #ffffff;
+    font-size: $padding + 20px;
+    font-style: uppercase;
+    margin-bottom:$padding;
+}
+
+p{
+    color: #ffffff;
+    font-size: $logo-margin-top;
+    font-style: italic;
+    margin-bottom: $padding;
+}
+
+a{
+    font-style:normal;
+    margin: 0 $logo-margin-top;
+    text-transform: uppercase;
+}
+}
+}
+#services{
+    padding: $padding + 50px 0;
+
+    .single-services{
+        span{
+            display: inline-block;
+            width: $padding;
+            height: $padding;
+            background-color: $basecolor;
+            -webkit-border-radius:$height - 50%;
+            -moz-border-radius:$height - 50%;
+            border-radius:$height - 50%;
+        }
+        i{
+            padding: $logo-margin-top 0;
+            color: #ffffff;
+        }
+        h4{
+            color: $basecolor;
+            margin: $logo-margin-top 0;
+
+        }
+    }
+
+}
+#contact{
+    padding: $padding + 50px 20px;
+    background-color: yellow;
+    padding: $padding;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+#about{
+    padding: 60px 0;
+    text-align: center;
+}
+.footer {
+    width: $height;
+    background: #7f7f7f;
+    padding: $logo-margin-top 0;
+    text-align: center;
+}
